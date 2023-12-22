@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.tab-button-active {
+  @apply font-semibold border-b-2 border-purple-400 pb-2 pr-8;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.tab-button-active .item-count {
+  @apply font-normal;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.tab-button {
+  @apply pb-2 pr-8;
+}
+
+.item-count {
+  @apply font-semibold text-sm inline-block bg-gray-300 text-gray-700 rounded-full px-2 ml-2;
+}
+
+.pill {
+  @apply inline-block px-2 py-1 mr-4 rounded-md text-gray-500 bg-gray-100 font-semibold;
 }
